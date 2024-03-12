@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите номер операции: \n1. Сложение\n2. Вычитание\n3. Умножение");
+        int operationNumber = Convert.ToInt32(Console.ReadLine());
+
+        string operationName = "";
+        switch (operationNumber)
+        {
+            case 1:
+                operationName = "Сложение";
+                break;
+            case 2:
+                operationName = "Вычитание";
+                break;
+            case 3:
+                operationName = "Умножение";
+                break;
+            default:
+                operationName = "Операция неопределена";
+                break;
+        }
+
+        Console.WriteLine("Выбранная операция: " + operationName);
+    }
+}

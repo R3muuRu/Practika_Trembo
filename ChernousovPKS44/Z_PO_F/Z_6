@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static bool IsPalindrome(string text)
+    {
+        int left = 0;
+        int right = text.Length - 1;
+
+        while (left < right)
+        {
+            if (text[left] != text[right])
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    static void Main()
+    {
+        string input = "level";
+        
+        bool isPalindrome = IsPalindrome(input.ToLower()); // Приводим к нижнему регистру для регистронезависимого сравнения
+
+        if (isPalindrome)
+        {
+            Console.WriteLine("Строка \"{0}\" - палиндром.", input);
+        }
+        else
+        {
+            Console.WriteLine("Строка \"{0}\" - не палиндром.", input);
+        }
+    }
+}

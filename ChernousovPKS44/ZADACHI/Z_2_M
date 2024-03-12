@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] stringsArray = { "яблоко", "банан", "вишня", "апельсин", "малина" };
+
+        Console.WriteLine("Введите новую строку:");
+        string newString = Console.ReadLine();
+
+        bool stringFound = false;
+
+        foreach (string str in stringsArray)
+        {
+            if (str.Equals(newString))
+            {
+                stringFound = true;
+                break;
+            }
+        }
+
+        if (stringFound)
+        {
+            Console.WriteLine("Строка найдена!");
+        }
+        else
+        {
+            Console.WriteLine("Строка не найдена!");
+        }
+    }
+}

@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static double CircleArea(double radius)
+    {
+        double area = Math.PI * radius * radius;
+        return area;
+    }
+
+    static void Main()
+    {
+        double radius = 5;
+
+        double area = CircleArea(radius);
+
+        Console.WriteLine("Площадь окружности с радиусом {0} равна: {1}", radius, area);
+    }
+}

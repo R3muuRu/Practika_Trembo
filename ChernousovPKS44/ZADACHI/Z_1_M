@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Исходный массив целых чисел
+        int[] numbers = { 5, 10, 3, 8, 7, 14, 21 };
+
+        Console.WriteLine("Нечетные числа из массива:");
+        foreach (int num in numbers)
+        {
+            if (num % 2 != 0)
+            {
+                Console.WriteLine(num);
+            }
+        }
+    }
+}

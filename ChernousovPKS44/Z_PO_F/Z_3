@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static int StringLength(string text)
+    {
+        return text.Length;
+    }
+
+    static void Main()
+    {
+        string input = "Пример строки";
+
+        int length = StringLength(input);
+
+        Console.WriteLine("Длина строки \"{0}\" равна: {1}", input, length);
+    }
+}

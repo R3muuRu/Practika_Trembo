@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static int[] MergeArrays(int[] arr1, int[] arr2)
+    {
+        int totalLength = arr1.Length + arr2.Length;
+        int[] result = new int[totalLength];
+
+        Array.Copy(arr1, result, arr1.Length);
+        Array.Copy(arr2, 0, result, arr1.Length, arr2.Length);
+
+        return result;
+    }
+
+    static void Main()
+    {
+        int[] arr1 = { 1, 2, 3 };
+        int[] arr2 = { 4, 5, 6, 7 };
+
+        int[] mergedArray = MergeArrays(arr1, arr2);
+
+        Console.WriteLine("Объединенный массив:");
+        foreach (int num in mergedArray)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}

@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static int Factorial(int number)
+    {
+        if (number == 0)
+        {
+            return 1;
+        }
+        
+        int result = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            result *= i;
+        }
+        return result;
+    }
+
+    static void Main()
+    {
+        int num = 5;
+
+        int factorial = Factorial(num);
+
+        Console.WriteLine("Факториал числа {0} равен: {1}", num, factorial);
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите сумму вклада:");
+        decimal depositAmount = Convert.ToDecimal(Console.ReadLine());
+
+        Console.WriteLine("Введите количество месяцев:");
+        int months = Convert.ToInt32(Console.ReadLine());
+
+        decimal totalAmount = depositAmount;
+
+        for (int i = 0; i < months; i++)
+        {
+            totalAmount += Math.Round(totalAmount * 0.07m, 2); 
+
+        Console.WriteLine($"Конечная сумма вклада через {months} месяцев: {totalAmount}");
+        }
+    }
+}
